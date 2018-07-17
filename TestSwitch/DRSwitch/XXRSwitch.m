@@ -10,9 +10,6 @@
 
 @implementation XXRSwitch
 
-- (void)sendActionsForControlEvents:(UIControlEvents)controlEvents {
-    [super sendActionsForControlEvents:controlEvents];
-    NSLog(@"调用了此处的函数");
-}
+
 
 @end

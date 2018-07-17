@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "XXRSwitchCell.h"
 
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** <#param#>     */
 @property (nonatomic, strong) UITableView                    *tableView;
@@ -34,8 +35,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"123";
-
+//    static NSString *identifier = @"123";
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 //    if (nil == cell) {
 //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];

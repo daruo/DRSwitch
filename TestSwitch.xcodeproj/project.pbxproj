@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2008D69384673E022DAE2F /* libPods-TestSwitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA40128828501378A443DF04 /* libPods-TestSwitch.a */; };
 		ADBF78DB20FD7CF700B0E15A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBF78DA20FD7CF700B0E15A /* AppDelegate.m */; };
 		ADBF78DE20FD7CF700B0E15A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBF78DD20FD7CF700B0E15A /* ViewController.m */; };
 		ADBF78E120FD7CF700B0E15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBF78DF20FD7CF700B0E15A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		309CBF89E2BA551341A991D4 /* Pods-TestSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSwitch/Pods-TestSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		ADBF78D620FD7CF700B0E15A /* TestSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBF78D920FD7CF700B0E15A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ADBF78DA20FD7CF700B0E15A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		ADBF78F020FD7F1D00B0E15A /* XXRSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXRSwitchCell.m; sourceTree = "<group>"; };
 		ADBF78F320FD7FA800B0E15A /* XXRSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXRSwitch.h; sourceTree = "<group>"; };
 		ADBF78F420FD7FA800B0E15A /* XXRSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXRSwitch.m; sourceTree = "<group>"; };
+		DA40128828501378A443DF04 /* libPods-TestSwitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestSwitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B5497AAD2A7E9244771A29 /* Pods-TestSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwitch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSwitch/Pods-TestSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2008D69384673E022DAE2F /* libPods-TestSwitch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B69B36A5998FF4AA533F6A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA40128828501378A443DF04 /* libPods-TestSwitch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81CD7DE46228CE272C423E5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8B5497AAD2A7E9244771A29 /* Pods-TestSwitch.debug.xcconfig */,
+				309CBF89E2BA551341A991D4 /* Pods-TestSwitch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ADBF78CD20FD7CF700B0E15A = {
 			isa = PBXGroup;
 			children = (
 				ADBF78D820FD7CF700B0E15A /* TestSwitch */,
 				ADBF78D720FD7CF700B0E15A /* Products */,
+				81CD7DE46228CE272C423E5D /* Pods */,
+				7B69B36A5998FF4AA533F6A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADBF78EC20FD7CF900B0E15A /* Build configuration list for PBXNativeTarget "TestSwitch" */;
 			buildPhases = (
+				A3DCD1EB125874B72CDD36EB /* [CP] Check Pods Manifest.lock */,
 				ADBF78D220FD7CF700B0E15A /* Sources */,
 				ADBF78D320FD7CF700B0E15A /* Frameworks */,
 				ADBF78D420FD7CF700B0E15A /* Resources */,
+				D82A1934A560BCE82DF2A0DD /* [CP] Embed Pods Frameworks */,
+				D1DC73831D20A0BF34C0431F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +180,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3DCD1EB125874B72CDD36EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestSwitch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1DC73831D20A0BF34C0431F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestSwitch/Pods-TestSwitch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D82A1934A560BCE82DF2A0DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestSwitch/Pods-TestSwitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADBF78D220FD7CF700B0E15A /* Sources */ = {
@@ -301,16 +379,14 @@
 		};
 		ADBF78ED20FD7CF900B0E15A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B5497AAD2A7E9244771A29 /* Pods-TestSwitch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97WGUG7HN7;
 				INFOPLIST_FILE = TestSwitch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BeeSmart.TestSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,16 +395,14 @@
 		};
 		ADBF78EE20FD7CF900B0E15A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 309CBF89E2BA551341A991D4 /* Pods-TestSwitch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97WGUG7HN7;
 				INFOPLIST_FILE = TestSwitch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BeeSmart.TestSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

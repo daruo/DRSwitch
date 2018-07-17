@@ -7,7 +7,8 @@
 //
 
 #import "XXRSwitchCell.h"
-
+#import "UIView+SDAutoLayout.h"
+#import "UITableView+SDAutoTableViewCellHeight.h"
 @interface XXRSwitchCell()
 
 @end
@@ -27,7 +28,15 @@
 -(void)setupSubView {
     self.rightSwitch = [[XXRSwitch alloc] init];
     [self.rightSwitch addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
-    self.accessoryView = self.rightSwitch;
+    
+//    self.accessoryView = self.rightSwitch;
+    
+    [self.contentView addSubview:self.rightSwitch];
+    self.rightSwitch.sd_layout
+    .rightSpaceToView(self.contentView, 20)
+    .centerYEqualToView(self.contentView)
+    .widthIs(60)
+    .heightIs(30);
     
 }
 
